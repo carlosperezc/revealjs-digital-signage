@@ -10,16 +10,15 @@ This tool use jinja2 template to render it to ready Revealjs html using python.
 
 
 # To DO
-1. Add flask to serve the output file.
-2. Add remote API for control the presentation via API.
-3. Add more option to `generate.py`
-5. add raspberry pi gpio as a presentation control.
-6. Remove static jinja2 variable from the template.
-7. add more examples.
-8. convert ppt to revealjs website.
-9. convert pdf to revealjs website.
-10. convert markdown to revealjs website.
-11. walk through media dir and create revealjs website.
+* Add flask to serve the output file.
+* Add remote API for control the presentation via API.
+* Add more option to `generate.py`
+* add raspberry pi gpio as a presentation control.
+* add more examples.
+* convert ppt to revealjs website.
+* convert pdf to revealjs website.
+* convert markdown to revealjs website.
+* walk through media dir and create revealjs website.
 
 # config.yaml
 Presentation behaviour can be fine-tuned using a wide array of configuration options

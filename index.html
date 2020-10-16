@@ -20,9 +20,60 @@
 			<section>
     <h3>Ali Sample Page 1</h3>
 </section><section>
-    <h3>Ali Sample Page 2</h3>
-</section><section>
-    <h3>Ali Sample Page 3</h3>
+    <section data-auto-animate>
+        <pre data-id="code"><code data-line-numbers class="hljs" data-trim>
+            httpGet()
+            {
+              case "$configuredClient" in
+                curl)  curl -A curl -s "$@" ;;
+                wget)  wget -qO- "$@" ;;
+                httpie) http -b GET "$@" ;;
+                fetch) fetch -q "$@" ;;
+              esac
+            }
+        </code></pre>
+    </section>
+    <section data-auto-animate>
+        <pre data-id="code"><code data-line-numbers class="hljs" data-trim>
+            httpGet()
+            {
+              case "$configuredClient" in
+                curl)  curl -A curl -s "$@" ;;
+                &lt;div&gt;
+                &lt;p&gt;wget)  wget -qO- "$@" ;;&lt;/p&gt;
+                httpie) http -b GET "$@" ;;
+                fetch) fetch -q "$@" ;;
+              esac
+            }
+        </code></pre>
+    </section>
+    <section data-auto-animate>
+        <pre data-id="code"><code data-line-numbers class="hljs" data-trim>
+            httpGet()
+            {
+              case "$configuredClient" in
+                curl)  curl -A curl -s "$@" ;;
+                &lt;&gt;wget)  wget -qO- "$@" ;;&lt;&gt;
+                httpie) http -b GET "$@" ;;
+                &lt;fetch) fetch -q "$@" ;;&gt;
+              esac
+            }
+        </code></pre>
+    </section>
+</section><section data-transition="zoom">
+    <h3>data-transition: zoom</h3>
+</section>
+
+<section data-transition="zoom-in fade-out">
+    <h3>data-transition: zoom-in fade-out</h3>
+</section>
+
+<section>
+    <h3>Default</h3>
+</section>
+
+<section data-transition="convex">
+    <h3>data-transition: convex</h3>
 </section><section data-background-color="black">
   <h2>data-background: lightblue</h2>
 </section><section data-background-video="Media/coverr-sample072-9809.mp4">
