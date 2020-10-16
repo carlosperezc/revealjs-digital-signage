@@ -9,8 +9,6 @@ import yaml
 
 combinedHTMLSlides = "mergedHTML.html"
 
-if os.path.exists(combinedHTMLSlides):
-    os.remove(combinedHTMLSlides)
 
 def mergeSections():
     with open(combinedHTMLSlides, 'wb') as wfd:
