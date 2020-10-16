@@ -1,4 +1,10 @@
 ---
+#Script options
+htmlOutputFileName: index.html
+combinedHTMLSlides: mergedHTML.html
+slidesPrefixPathnName: sections/slide*.html
+templateFileName: mainTemplate.html
+#Reveal settings
 title: Revealjs as Digital Signage (RDS)
 description: Free Digital Signage for Everyone. Start using this tool right now. Revealjs as Digital Signage (RDS) is the easy tool to create Digital Signage.
 author: Ali Saleh Baker
