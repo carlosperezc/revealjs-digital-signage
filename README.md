@@ -6,6 +6,7 @@ Revealjs as Digital Signage (RDS) (beta testing)
 =========
 
 Free Digital Signage for Everyone. Start using this tool right now. `Revealjs as Digital Signage (RDS)` is an easy tool to create Digital Signage.
+This tool use jinja2 template to render it to ready Revealjs html using python.
 
 
 # To DO
@@ -15,6 +16,7 @@ Free Digital Signage for Everyone. Start using this tool right now. `Revealjs as
 4. Simplify the configuration.
 5. add raspberry pi gpio as a presentation control.
 6. Remove static jinja2 variable from the template.
+7. add more examples.
 
 # config.yaml
 Presentation behaviour can be fine-tuned using a wide array of configuration options
