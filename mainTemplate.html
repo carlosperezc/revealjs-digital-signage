@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>{{title}}</title>
+	<meta name="description" content="{{description}}">
+	<meta name="author" content="{{author}}">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="Files/stylesheet/reset.css">
+	<link rel="stylesheet" href="Files/stylesheet/reveal.css">
+	<link rel="stylesheet" href="Files/stylesheet/themes/{{theme}}.css" id="theme">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			{% include 'sections/slide1.html' %}
+			{% include 'sections/slide2.html' %}
+			{% include 'sections/slide3.html' %}
+			{% include 'sections/slide4.html' %}
+			{% include 'sections/slide5.html' %}
+			{% include 'sections/slide6.html' %}
+			{% include 'sections/slide7.html' %}
+
+		</div>
+	</div>
+	<script src="Files/stylesheet/reveal.js"></script>
+	<script src="Files/plugins/zoom/zoom.js"></script>
+	<script src="Files/plugins/notes/notes.js"></script>
+	<script src="Files/plugins/search/search.js"></script>
+	<script src="Files/plugins/markdown/markdown.js"></script>
+	<script src="Files/plugins/highlight/highlight.js"></script>
+	<script>
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			center: true,
+			hash: true,
+			plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
+		});
+	</script>
+</body>
+
+</html>
