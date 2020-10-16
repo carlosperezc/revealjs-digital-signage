@@ -19,8 +19,15 @@ Free Digital Signage for Everyone. Start using this tool right now. `Revealjs as
 # config.yaml
 Presentation behaviour can be fine-tuned using a wide array of configuration options
 
+Example:
+```Bash
+transitions: zoom # none, fade, slide, convex, concave, zoom
+autoPlayMedia: "true" #null, "true", "false"
+hashOneBasedIndex: "true"
+```
+
 # generate.py
-run command to render the template
+run command to render the template `python generate.py`
 
 # Media
 Store all media that you used inside the slides
