@@ -26,6 +26,11 @@ Presentation behaviour can be fine-tuned using a wide array of configuration opt
 
 Example:
 ```Bash
+htmlOutputFileName: index.html #Final output HTML file
+combinedHTMLSlides: mergedHTML.html #Name of combined section
+slidesPrefixPathnName: sections/slide*.html #Section html files path and prefix
+templateFileName: mainTemplate.html #Main HTML template file
+finalOutputDir: output #Output Dir name
 transitions: zoom # none, fade, slide, convex, concave, zoom
 autoPlayMedia: "true" #null, "true", "false"
 hashOneBasedIndex: "true"
@@ -52,6 +57,7 @@ Put all your slide in HTML files
 4. run command `python generate.py`
 5. the output file with name `index.html` will appear in the root Dir.
 
+Check the output Dir for final HTML files, you can find path under config['finalOutputDir']
 
 
 
