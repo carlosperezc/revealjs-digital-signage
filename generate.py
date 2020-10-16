@@ -56,8 +56,8 @@ def generateRevealsOutputDir(outputDir):
         shutil.rmtree(outputDir)
     except:
         pass
-    copytree("Files", f"{outputDir}/Files.")
-    shutil.copytree("Media", f"{outputDir}/Media.")
+    copytree("Files", f"{outputDir}/Files")
+    shutil.copytree("Media", f"{outputDir}/Media")
     shutil.copy(config['htmlOutputFileName'], outputDir)
 
 
