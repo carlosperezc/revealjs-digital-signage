@@ -8,6 +8,7 @@ import yaml
 
 
 # Load configration
+print("Reading config file")
 with open('config.yaml') as configFile:
     config = yaml.load(configFile, Loader=yaml.FullLoader)
 
@@ -61,9 +62,11 @@ def generateRevealsOutputDir(outputDir):
 
 
 # Combine all section into one html file
+print("Combine sections into one file")
 mergeSections()
 
 # Load Template file
+print("Load Template file")
 root = os.path.dirname(os.path.abspath(__file__))
 templates_dir = os.path.join(root)
 env = Environment(loader=FileSystemLoader(templates_dir))
@@ -77,5 +80,6 @@ with open(outputIndexFile, 'w') as fh:
 # Do a Cleanup
 if os.path.exists(config['combinedHTMLSlides']):
     os.remove(config['combinedHTMLSlides'])
-
+print("Generate output file.")
 generateRevealsOutputDir(config['finalOutputDir'])
+print("Finished")

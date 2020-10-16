@@ -14,11 +14,6 @@ This tool use jinja2 template to render it to ready Revealjs html using python.
 * Add remote API for control the presentation via API.
 * Add more option to `generate.py`
 * add raspberry pi gpio as a presentation control.
-* add more examples.
-* convert ppt to revealjs website.
-* convert pdf to revealjs website.
-* convert markdown to revealjs website.
-* walk through media dir and create revealjs website.
 
 # config.yaml
 Presentation behaviour can be fine-tuned using a wide array of configuration options
@@ -56,9 +51,19 @@ Put all your slide in HTML files
 4. run command `python generate.py`
 5. the output file with name `index.html` will appear in the root Dir.
 
+
+## Using Docker
+
+```Bash
+docker container run -ti -v $PWD:/app alivx/rds:latest
+```
+
 Check the output Dir for final HTML files, you can find path under config['finalOutputDir']
 
 
+
+# Notes:
+* you can use print option in the browser to print presentation slides as PDF file.
 
 Author Information
 ------------------
