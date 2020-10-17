@@ -12,7 +12,6 @@ This tool use jinja2 template to render it to ready Revealjs html using python.
 
 
 # To DO
-* Add flask to serve the output file.
 * Add remote API for control the presentation via API.
 * Add more option to `generate.py`
 * add raspberry pi gpio as a presentation control.

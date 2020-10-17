@@ -56,8 +56,8 @@ def generateRevealsOutputDir(outputDir):
     except:
         pass
     copytree("static/", f"{outputDir}/static")
-    shutil.copy(config['htmlOutputFileName'], outputDir)
-    shutil.copy("serve.py", outputDir)
+    shutil.move(config['htmlOutputFileName'], outputDir)
+    shutil.move("serve.py", outputDir)
 
 
 def templateFunction(templateName, templateOutput):
