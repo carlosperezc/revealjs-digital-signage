@@ -1,8 +1,6 @@
 <div align="center">
   <img src="https://github.com/alivx/Ego-View-Digital-Signage/blob/master/Media/header.png">
 </div>
-[Maintained?](#maintained)
-[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
 Revealjs as Digital Signage (RDS) (beta testing)
 =========
