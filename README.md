@@ -1,9 +1,12 @@
 <div align="center">
   <img src="https://github.com/alivx/Ego-View-Digital-Signage/blob/master/Media/header.png">
 </div>
+[Maintained?](#maintained) [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
 Revealjs as Digital Signage (RDS) (beta testing)
 =========
+
+[![Build Status](https://travis-ci.org/alivx/revealjs-digital-signage.svg?branch=master)](https://travis-ci.org/alivx/revealjs-digital-signage)
 
 Free Digital Signage for Everyone. Start using this tool right now. `Revealjs as Digital Signage (RDS)` is an easy tool to create Digital Signage.
 This tool use jinja2 template to render it to ready Revealjs html using python.
