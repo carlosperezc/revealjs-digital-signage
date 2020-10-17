@@ -3,8 +3,13 @@
 htmlOutputFileName: index.html #Final output HTML file
 combinedHTMLSlides: mergedHTML.html #Name of combined section
 slidesPrefixPathnName: sections/slide*.html #Section html files path and prefix
-templateFileName: mainTemplate.html #Main HTML template file
+templateFileName: mainTemplate.html.j2 #Main HTML template file
 finalOutputDir: output #Output Dir name
+#Flask(web framework ) settings
+flaskRunFile: serve.py.j2
+host: localhost
+port: 5000
+debug: True #True or False
 #Reveal settings
 title: Revealjs as Digital Signage (RDS)
 description: Free Digital Signage for Everyone. Start using this tool right now. Revealjs as Digital Signage (RDS) is the easy tool to create Digital Signage.

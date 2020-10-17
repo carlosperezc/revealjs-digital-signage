@@ -35,10 +35,10 @@ hashOneBasedIndex: "true"
 # generate.py
 run command to render the template `python generate.py`
 
-# Media
+# static/Media
 Store all media that you used inside the slides
 
-# Files
+# static/Files
 Do not touch those file(revealjs files), if you do not know what you do :)
 
 # sections
@@ -62,6 +62,13 @@ docker container run -ti -v $PWD:/app alivx/rds:latest
 
 Check the output Dir for final HTML files, you can find path under config['finalOutputDir']
 
+
+
+# Serve html file using flask
+under output file, run python serve.py
+
+* check default URL http://localhost:500
+* you can change flask setting under `config.yaml`
 
 
 # Notes:

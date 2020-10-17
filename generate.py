@@ -6,7 +6,6 @@ import shutil
 from jinja2 import Template, Environment, FileSystemLoader
 import yaml
 
-
 # Load configration
 print("Reading config file.")
 with open('config.yaml') as configFile:
@@ -56,26 +55,35 @@ def generateRevealsOutputDir(outputDir):
         shutil.rmtree(outputDir)
     except:
         pass
-    copytree("Files", f"{outputDir}/Files")
-    shutil.copytree("Media", f"{outputDir}/Media")
+    copytree("static/", f"{outputDir}/static")
     shutil.copy(config['htmlOutputFileName'], outputDir)
+    shutil.copy("serve.py", outputDir)
+
+
+def templateFunction(templateName, templateOutput):
+    """rander j2 templete file(Load Template file)
+
+    Args:
+        templateName str: source template file .j2
+        templateOutput str: dist output file
+    """
+    print(f"Load Template file {templateName}.")
+    root = os.path.dirname(os.path.abspath(__file__))
+    templates_dir = os.path.join(root)
+    env = Environment(loader=FileSystemLoader(templates_dir))
+    template = env.get_template(templateName)
+    outputIndexFile = os.path.join(root, templateOutput)
+    # Save index file
+    with open(outputIndexFile, 'w') as fh:
+        fh.write(template.render(config))
 
 
 # Combine all section into one html file
 print("Combine sections into one file.")
 mergeSections()
-
-# Load Template file
-print("Load Template file.")
-root = os.path.dirname(os.path.abspath(__file__))
-templates_dir = os.path.join(root)
-env = Environment(loader=FileSystemLoader(templates_dir))
-template = env.get_template(config['templateFileName'])
-outputIndexFile = os.path.join(root, config['htmlOutputFileName'])
-# Save index file
-with open(outputIndexFile, 'w') as fh:
-    fh.write(template.render(config))
-
+# Load templates
+templateFunction(config['templateFileName'], config['htmlOutputFileName'])
+templateFunction(config['flaskRunFile'], "serve.py")
 
 # Do a Cleanup
 if os.path.exists(config['combinedHTMLSlides']):
