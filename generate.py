@@ -27,24 +27,6 @@ def mergeSections():
     return config['combinedHTMLSlides']
 
 
-def copytree(src, dst, symlinks=False, ignore=None):
-    """Function to copy Dir
-
-    Args:
-        src str: source Dir
-        dst str: dist  Dir
-        symlinks (bool, optional): follow symlinks. Defaults to False.
-        ignore ([type], optional): ignour. Defaults to None.
-    """
-    for item in os.listdir(src):
-        s = os.path.join(src, item)
-        d = os.path.join(dst, item)
-        if os.path.isdir(s):
-            shutil.copytree(s, d, symlinks, ignore)
-        else:
-            shutil.copy2(s, d)
-
-
 def generateRevealsOutputDir(outputDir):
     """Copy all reveal releted files into output
 
@@ -55,7 +37,7 @@ def generateRevealsOutputDir(outputDir):
         shutil.rmtree(outputDir)
     except:
         pass
-    copytree("static/", f"{outputDir}/static")
+    shutil.copytree("static/", f"{outputDir}/static")
     shutil.move(config['htmlOutputFileName'], outputDir)
     shutil.move("serve.py", outputDir)
 

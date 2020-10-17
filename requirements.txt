@@ -1,2 +1,4 @@
+Flask_SocketIO==0.4.1
+Flask==0.10.1
 Jinja2==2.10.3
 PyYAML==5.3.1

@@ -10,6 +10,7 @@ flaskRunFile: serve.py.j2
 host: localhost
 port: 5000
 debug: True #True or False
+secret_key: 90e6c1f4a13c9
 #Reveal settings
 title: Revealjs as Digital Signage (RDS)
 description: Free Digital Signage for Everyone. Start using this tool right now. Revealjs as Digital Signage (RDS) is the easy tool to create Digital Signage.

@@ -46,6 +46,7 @@ Put all your slide in HTML files
 ---
 
 # How to use
+0. Create new venv by `python -m venv venv/`
 1. Put your slide as HTML in `sections` Dir.
 2. Put your media files in Media if exists.
 3. change the config files if required.
@@ -68,6 +69,45 @@ under output file, run python serve.py
 
 * check default URL http://localhost:500
 * you can change flask setting under `config.yaml`
+
+# How to add new section(slide)
+Markup hierarchy needs to be <div class="reveal"> <div class="slides"> <section> where the <section> represents one slide and can be repeated indefinitely. If you place multiple <section>'s inside of another <section> they will be shown as vertical slides. The first of the vertical slides is the "root" of the others (at the top), and it will be included in the horizontal sequence. For example:
+
+
+```html
+	<div class="reveal">
+		<div class="slides">
+      <!-- all content inside sections Dir will be included here automaticly -->
+      {% include combinedHTMLSlides %}
+      <section>Another slide</section>
+		</div>
+	</div>
+```
+
+### Markdown
+write your slides using Markdown. To enable Markdown, add the data-markdown attribute to your <section> elements and wrap the contents in a <script type="text/template"> like the example below.
+
+```html
+<section data-markdown>
+	<script type="text/template">
+  ## Blockquotes
+  > Blockquotes can also be nested...
+  >> ...by using additional greater-than signs right next to each other...
+  > > > ...or with spaces between arrows.
+  ## Lists
+  Unordered
+
+  + Create a list by starting a line with `+`, `-`, or `*`
+  + Sub-lists are made by indenting 2 spaces:
+    - Marker character change forces new list start:
+      * Ac tristique libero volutpat at
+      + Facilisis in pretium nisl aliquet
+      - Nulla volutpat aliquam velit
+  + Very easy!
+	</script>
+</section>
+```
+
 
 
 # Notes:
