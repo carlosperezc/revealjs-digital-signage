@@ -12,11 +12,12 @@ This tool use jinja2 template to render it to ready Revealjs html using python.
 
 ![](static/Media/demo.gif)
 
+### Summary
+This project divied into two type:
+1. the flask app that serve revalsjs html slides.
+2. selenium part that run flask to control page(next, back, jump to slide(slide_number))
 
-# To DO
-* Add remote API for control the presentation via API.
-* Add more option to `generate.py`
-* add raspberry pi gpio as a presentation control.
+
 
 # config.yaml
 Presentation behaviour can be fine-tuned using a wide array of configuration options
@@ -55,8 +56,13 @@ Put all your slide in HTML files
 4. run command `python generate.py`
 5. the output file with name `index.html` will appear in the root Dir.
 
+To control slide using cli:
+run `cd signage;python main.py` in other terminal.
+Next slide: run command `curl http://localhost:/5001/next`
+Prev slide: run command `curl http://localhost:/5001/next`
+Jump to slide: run command `curl http://localhost:/5001/slide/slide_number`
 
-## Using Docker
+## Using Docker to generate a new slides files from existing one.
 
 ```Bash
 docker container run -ti -v $PWD:/app alivx/rds:latest
