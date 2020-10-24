@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/alivx/Ego-View-Digital-Signage/blob/master/Media/header.png">
+  <img src="https://github.com/alivx/Ego-View-Digital-Signage/blob/master/static/Media/header.png">
 </div>
 
 Revealjs as Digital Signage (RDS) (beta testing)
