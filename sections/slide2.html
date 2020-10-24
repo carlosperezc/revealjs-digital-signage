@@ -1,6 +1,5 @@
 <section>
-    <section data-auto-animate>
-        <pre data-id="code"><code data-line-numbers class="hljs" data-trim>
+  <pre data-id="code"><code data-line-numbers class="hljs" data-trim>
             httpGet()
             {
               case "$configuredClient" in
@@ -11,32 +10,4 @@
               esac
             }
         </code></pre>
-    </section>
-    <section data-auto-animate>
-        <pre data-id="code"><code data-line-numbers class="hljs" data-trim>
-            httpGet()
-            {
-              case "$configuredClient" in
-                curl)  curl -A curl -s "$@" ;;
-                &lt;div&gt;
-                &lt;p&gt;wget)  wget -qO- "$@" ;;&lt;/p&gt;
-                httpie) http -b GET "$@" ;;
-                fetch) fetch -q "$@" ;;
-              esac
-            }
-        </code></pre>
-    </section>
-    <section data-auto-animate>
-        <pre data-id="code"><code data-line-numbers class="hljs" data-trim>
-            httpGet()
-            {
-              case "$configuredClient" in
-                curl)  curl -A curl -s "$@" ;;
-                &lt;&gt;wget)  wget -qO- "$@" ;;&lt;&gt;
-                httpie) http -b GET "$@" ;;
-                &lt;fetch) fetch -q "$@" ;;&gt;
-              esac
-            }
-        </code></pre>
-    </section>
 </section>

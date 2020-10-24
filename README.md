@@ -61,7 +61,7 @@ Jump to slide: run command `curl http://localhost:/500/slide/slide_number`
 ```Bash
 docker container run -ti  -p5000:5000  --net=host  alivx/ali:latest
 Or for local edit
-docker container run -ti -v $PWD:/app -p5000:5000  --net=host alivx/rds:latest
+docker container run -ti -v $PWD:/app -p5000:5000  --net=host alivx/ali:latest
 ```
 
 Check the output Dir for final HTML files, you can find path under config['finalOutputDir']
