@@ -43,6 +43,8 @@ Put all your slide in HTML files
 ---
 
 # How to use
+[ascii play cast](https://asciinema.org/a/367581)
+
 0. Create new venv by `python -m venv venv/`
 1. Put your slide as HTML in `sections` Dir.
 2. Put your media files in Media if exists.
@@ -61,7 +63,7 @@ Jump to slide: run command `curl http://localhost:/500/slide/slide_number`
 ```Bash
 docker container run -ti  -p5000:5000  --net=host  alivx/ali:latest
 Or for local edit
-docker container run -ti -v $PWD:/app -p5000:5000  --net=host alivx/ali:latest
+docker container run -ti -v $PWD:/app -p5000:5000  --net=host local:rds
 ```
 
 Check the output Dir for final HTML files, you can find path under config['finalOutputDir']
