@@ -12,12 +12,6 @@ This tool use jinja2 template to render it to ready Revealjs html using python.
 
 ![](static/Media/demo.gif)
 
-### Summary
-This project divied into two type:
-1. the flask app that serve revalsjs html slides.
-2. selenium part that run flask to control page(next, back, jump to slide(slide_number))
-
-
 
 # config.yaml
 Presentation behaviour can be fine-tuned using a wide array of configuration options
@@ -58,14 +52,16 @@ Put all your slide in HTML files
 
 To control slide using cli:
 run `cd signage;python main.py` in other terminal.
-Next slide: run command `curl http://localhost:/5001/next`
-Prev slide: run command `curl http://localhost:/5001/next`
-Jump to slide: run command `curl http://localhost:/5001/slide/slide_number`
+Next slide: run command `curl http://localhost:/500/next`
+Prev slide: run command `curl http://localhost:/500/next`
+Jump to slide: run command `curl http://localhost:/500/slide/slide_number`
 
 ## Using Docker to generate a new slides files from existing one.
 
 ```Bash
-docker container run -ti -v $PWD:/app alivx/rds:latest
+docker container run -ti  -p5000:5000  --net=host  alivx/ali:latest
+Or for local edit
+docker container run -ti -v $PWD:/app -p5000:5000  --net=host alivx/rds:latest
 ```
 
 Check the output Dir for final HTML files, you can find path under config['finalOutputDir']
@@ -75,7 +71,7 @@ Check the output Dir for final HTML files, you can find path under config['final
 # Serve html file using flask
 under output file, run python serve.py
 
-* check default URL http://localhost:500
+* check default URL http://localhost:5000
 * you can change flask setting under `config.yaml`
 
 # How to add new section(slide)

@@ -7,7 +7,7 @@ templateFileName: mainTemplate.html.j2 #Main HTML template file
 finalOutputDir: output #Output Dir name
 #Flask(web framework ) settings
 flaskRunFile: serve.py.j2
-host: localhost
+host: 0.0.0.0
 port: 5000
 debug: True #True or False
 secret_key: 90e6c1f4a13c9
