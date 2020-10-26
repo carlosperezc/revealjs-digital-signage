@@ -13,15 +13,7 @@
 	<link rel="stylesheet" href="static/Files/stylesheet/reveal.css">
 	<link rel="stylesheet" href="static/Files/stylesheet/themes/{{theme}}.css" id="theme">
 	<script type="text/javascript" src="static/Files/libs/socket.io.js"></script>
-	<script>
-		const socket = io();
-		socket.on('next', () => {
-			Reveal.next();
-		})
-		socket.on('prev', () => {
-			Reveal.prev();
-		})
-	</script>
+	<script type="text/javascript" src="static/Files/libs/remoteHandler.js"></script>
 </head>
 
 <body>
@@ -92,5 +84,4 @@
 		});
 	</script>
 </body>
-
 </html>

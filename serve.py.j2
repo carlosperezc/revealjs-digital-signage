@@ -3,7 +3,7 @@ from flask_socketio import SocketIO, send, emit
 
 # creates a Flask application, named app
 app = Flask(__name__, static_folder="static", template_folder="./")
-app.config['SECRET_KEY'] = 'secret!'
+app.config['SECRET_KEY'] = '{{secret_key}}!'
 socketio = SocketIO(app)
 
 
@@ -21,6 +21,11 @@ def nextRoute():
 @app.route("/prev")
 def prevRoute():
     socketio.emit('prev')
+    return "next"
+
+@app.route("/slide/<init:slide>")
+def prevRoute():
+    socketio.emit('{0}'.format(slide))
     return "next"
 
 
