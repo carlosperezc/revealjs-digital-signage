@@ -117,6 +117,7 @@ write your slides using Markdown. To enable Markdown, add the data-markdown attr
 
 
 # Notes:
+
 * you can use print option in the browser to print presentation slides as PDF file.
 
 Author Information
