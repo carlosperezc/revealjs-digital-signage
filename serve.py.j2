@@ -23,8 +23,9 @@ def prevRoute():
     socketio.emit('prev')
     return "next"
 
-@app.route("/slide/<init:slide>")
-def prevRoute():
+
+@app.route("/slide/<int:slide>")
+def slideNumber():
     socketio.emit('{0}'.format(slide))
     return "next"
 
