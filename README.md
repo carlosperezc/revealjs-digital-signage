@@ -54,9 +54,9 @@ Put all your slide in HTML files
 
 To control slide using cli:
 run `cd signage;python main.py` in other terminal.
-Next slide: run command `curl http://localhost:/500/next`
-Prev slide: run command `curl http://localhost:/500/next`
-Jump to slide: run command `curl http://localhost:/500/slide/slide_number`
+Next slide: run command `curl http://localhost:5000/next`
+Prev slide: run command `curl http://localhost:5000/next`
+Jump to slide: run command `curl http://localhost:5000/slide/slide_number`
 
 ## Using Docker to generate a new slides files from existing one.
 
